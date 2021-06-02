@@ -17,7 +17,7 @@ The code is implemented using Keras on Tensorflow.
 ***
 ### About de neuronal network
 
--We trained our neuronal network with 7 epochs and 5 times every image with data augmentation, (a total of 1500 images are processed in each epoch). If you want to try our training, you can try it downloading and putting it to the root directory:
+We trained our neuronal network with 7 epochs and 5 times every image with data augmentation, (a total of 1500 images are processed in each epoch). If you want to try our training, you can try it downloading and putting it to the root directory:
 s
 
 ***
