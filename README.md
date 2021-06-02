@@ -18,11 +18,8 @@ The code is implemented using Keras on Tensorflow.
 ### About neuronal network
 
 We trained our neuronal network with 7 epochs and 5 times every image with data augmentation, (a total of 1500 images are processed in each epoch). We did a second training reducing the dataset to see how the network will work. If you want to try our training, you can try it downloading and putting it to the root directory with the name *red_lego.h5*:
-    First train:
-    https://drive.google.com/file/d/1hK1yzGPQL63YtSub8Y0Hb-OYodp7eKub/view?usp=sharing
-    
-    Second train:
-    https://drive.google.com/file/d/1UIfeY2QB2PjmKDAZM9IEIoidkUm8iSGn/view?usp=sharing
+    First train: https://drive.google.com/file/d/1hK1yzGPQL63YtSub8Y0Hb-OYodp7eKub/view?usp=sharing
+    Second Train: https://drive.google.com/file/d/1UIfeY2QB2PjmKDAZM9IEIoidkUm8iSGn/view?usp=sharing
 
 ***
 ### Important anotations for the execution:
