@@ -27,5 +27,5 @@ pip install imutils
 
 ***
 
-***IMPORTANT***
+***IMPORTANT***:
 *Les versions emprades de tesorflow i keras no son les actualitzades, però les necessitem per la compatibilitat amb imgaug i h5py.*
