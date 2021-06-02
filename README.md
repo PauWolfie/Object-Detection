@@ -1,20 +1,20 @@
 # Object-Detection
 
-### Resum:
-Aquest projecte tracta la detecció d'objectes mitjançant el model de detecció You Only Look Once (YOLO) implementat mitjançant un tipus de xarxa neuronal convolucional anomenada Darknet per a la classificació d'imatges.
+### Summary:
+This project deals with object detection using the You Only Look Once (YOLO) detection model implemented using a type of convolutional neural network called Darknet for image classification.
 
-El codi està implementat utilitzant keras sobre Tensorflow.
-
-***
-### Estructura del projecte
-
-- El dataset utilitzat per aquest projecte es troba en */anotations* i */images*.
-- L'arxiu *full_yolo_backend.h5* conté els pesos de la xarxa Darknet.
+The code is implemented using Keras on Tensorflow.
 
 ***
-### Anotacions importants per a la seva execució:
-Aquest projecte s'ha implementat en python **3.6**. En qualsevol cas, la pràctica pot ser testejada en python **3.6.+**.
-Es recomanable crear un entorn virtual de python i instalar les seguents eines:
+### Project Structure
+
+-The dataset used for this project is in */anotations* and */images*.
+- The file *full_yolo_backend.h5* contains the weights of the Darknet network.
+
+***
+### Important anotations for the execution:
+This project has been implemented in python **3.6**. In any case, the practice can be tested in python **3.6.+**.
+It is recommended to create a virtual python environment and install the following tools:
 ~~~
 pip install tensorflow==1.13.2
 pip install keras==2.0.8
@@ -28,4 +28,4 @@ pip install imutils
 ***
 
 ***IMPORTANT***:
-*Les versions emprades de tesorflow i keras no son les actualitzades, però les necessitem per la compatibilitat amb imgaug i h5py.*
+*The versions of tesorflow and keras used are not up to date, but we need them for imgaug and h5py compatibility.*
