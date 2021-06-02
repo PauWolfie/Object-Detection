@@ -13,6 +13,12 @@ The code is implemented using Keras on Tensorflow.
   
 - The file *full_yolo_backend.h5* contains the weights of the Darknet network and it can be downloaded from here: 
   https://drive.google.com/file/d/17EBpgLF-LpPvchG4CUew1dfd8CSyG4ok/view?usp=sharing
+ 
+***
+### About de neuronal network
+
+-We trained our neuronal network with 7 epochs and 5 times every image with data augmentation, (a total of 1500 images are processed in each epoch). If you want to try our training, you can try it downloading and putting it to the root directory:
+s
 
 ***
 ### Important anotations for the execution:
