@@ -8,7 +8,7 @@ The code is implemented using Keras on Tensorflow.
 ***
 ### Project Structure
 
--The dataset used for this project is in */anotations* and */images*.
+- The dataset used for this project is in */anotations* and */images*.
 - The file *full_yolo_backend.h5* contains the weights of the Darknet network.
 
 ***
