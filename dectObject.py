@@ -1228,11 +1228,13 @@ anchors
 
 #--------------------------------------------------------------------------------------
 #
-# Training Neuronal WEB
+# Training Neural Netwok
 #
 #--------------------------------------------------------------------------------------
 
-# instanciamos al modelo
+# The network is trained in red_lego.h5
+
+"""
 yolo = YOLO(input_size=tamanio,
             labels=labels,
             max_box_per_image=5,
@@ -1252,10 +1254,11 @@ yolo.train(train_imgs=train_imgs,
            class_scale=1,
            saved_weights_name=mejores_pesos,
            debug=True)
+"""
 
 #--------------------------------------------------------------------------------------
 #
-# Trying the Web
+# Trying the network
 #
 #--------------------------------------------------------------------------------------
 
