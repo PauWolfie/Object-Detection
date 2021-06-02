@@ -8,11 +8,9 @@ The code is implemented using Keras on Tensorflow.
 ***
 ### Project Structure
 
-- The dataset used for this project will go to the root directory. It can be downloaded from here:
-    - https://drive.google.com/drive/folders/1bYZqQ4Bpeh-9vOd4zOuM4TGF1ElL3wZl?usp=sharing
+- The dataset used for this project will go to the root directory. It can be downloaded from [here](https://drive.google.com/drive/folders/1bYZqQ4Bpeh-9vOd4zOuM4TGF1ElL3wZl?usp=sharing).
   
-- The file *full_yolo_backend.h5* contains the weights of the Darknet network and it can be downloaded from here:
-    - https://drive.google.com/file/d/17EBpgLF-LpPvchG4CUew1dfd8CSyG4ok/view?usp=sharing
+- The file *full_yolo_backend.h5* contains the weights of the Darknet network and it can be downloaded from [here](https://drive.google.com/file/d/17EBpgLF-LpPvchG4CUew1dfd8CSyG4ok/view?usp=sharing).
  
 ***
 ### About neuronal network
