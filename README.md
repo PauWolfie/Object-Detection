@@ -15,6 +15,17 @@ El codi està implementat utilitzant keras sobre Tensorflow.
 ### Anotacions importants per a la seva execució:
 Aquest projecte s'ha implementat en python **3.6**. En qualsevol cas, la pràctica pot ser testejada en python **3.6.+**.
 Es recomanable crear un entorn virtual de python i instalar les seguents eines:
-'code
-code
-code'
+~~~
+pip install tensorflow==1.13.2
+pip install keras==2.0.8
+pip install imgaug==0.2.5
+pip install opencv-python
+pip install h5py==2.10.0
+pip install tqdm
+pip install imutils
+~~~
+
+***
+
+***IMPORTANT***
+*Les versions emprades de tesorflow i keras no son les actualitzades, però les necessitem per la compatibilitat amb imgaug i h5py.*
