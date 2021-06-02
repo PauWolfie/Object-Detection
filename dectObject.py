@@ -9,12 +9,17 @@ from imgaug import augmenters as iaa
 from keras.utils import Sequence
 import xml.etree.ElementTree as ET
 
-xml_dir = "annotation/lego4/"  # directorio que contiene los xml
-img_dir = "images/lego4/"  # directorios con las imagenes
+xml_dir = "annotation/lego4/"   # directory with the xml
+img_dir = "images/lego4/"       # directory with the images
 labels = ["lego"]
-tamanio = 416  # tamanio en pixeles para entrenar la red
+tamanio = 416                   # Size in pixels to train the web
 mejores_pesos = "red_lego.h5"
 
+#--------------------------------------------------------------------------------------
+#
+# Read Dataset
+#
+#--------------------------------------------------------------------------------------
 
 def leer_annotations(ann_dir, img_dir, labels=[]):
     all_imgs = []
@@ -68,6 +73,12 @@ def leer_annotations(ann_dir, img_dir, labels=[]):
 
 train_imgs, train_labels = leer_annotations(xml_dir, img_dir, labels)
 print('imagenes', len(train_imgs), 'labels', len(train_labels))
+
+#--------------------------------------------------------------------------------------
+#
+# Train and Validation
+#
+#--------------------------------------------------------------------------------------
 
 train_valid_split = int(0.8 * len(train_imgs))
 np.random.shuffle(train_imgs)
@@ -134,7 +145,13 @@ class BatchGenerator(Sequence):
         self.anchors = [BoundBox(0, 0, config['ANCHORS'][2 * i], config['ANCHORS'][2 * i + 1]) for i in
                         range(int(len(config['ANCHORS']) // 2))]
 
-        ### augmentors by https://github.com/aleju/imgaug
+        # --------------------------------------------------------------------------------------
+        #
+        # Data Augmentation
+        #
+        # --------------------------------------------------------------------------------------
+
+        # augmentors by https://github.com/aleju/imgaug
         sometimes = lambda aug: iaa.Sometimes(0.5, aug)
 
         self.aug_pipe = iaa.Sequential(
@@ -371,6 +388,11 @@ class BaseFeatureExtractor(object):
     def extract(self, input_image):
         return self.feature_extractor(input_image)
 
+#--------------------------------------------------------------------------------------
+#
+# Creating WEB Classification
+#
+#--------------------------------------------------------------------------------------
 
 class FullYoloFeature(BaseFeatureExtractor):
     """docstring for ClassName"""
@@ -1204,8 +1226,14 @@ for x in centroids:
     anchors.append(x[1])
 anchors
 
-# instanciamos al modelo (ja està fet)
-"""yolo = YOLO(input_size=tamanio,
+#--------------------------------------------------------------------------------------
+#
+# Training Neuronal WEB
+#
+#--------------------------------------------------------------------------------------
+
+# instanciamos al modelo
+yolo = YOLO(input_size=tamanio,
             labels=labels,
             max_box_per_image=5,
             anchors=anchors)
@@ -1224,7 +1252,13 @@ yolo.train(train_imgs=train_imgs,
            class_scale=1,
            saved_weights_name=mejores_pesos,
            debug=True)
-"""
+
+#--------------------------------------------------------------------------------------
+#
+# Trying the Web
+#
+#--------------------------------------------------------------------------------------
+
 def draw_boxes(image, boxes, labels):
     image_h, image_w, _ = image.shape
 
@@ -1246,7 +1280,7 @@ def draw_boxes(image, boxes, labels):
 
 mejores_pesos = "red_lego.h5"
 
-image_path = "images/test/croped12_232117.jpg"
+image_path = "images/test/lego_girl.png"
 
 mi_yolo = YOLO(input_size=tamanio,
                labels=labels,
