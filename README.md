@@ -36,4 +36,4 @@ pip install imutils
 ***
 
 ***IMPORTANT***:
-*The versions of tesorflow and keras used are not up to date, but we need them for imgaug and h5py compatibility.*
+*The versions of tesorflow and keras used are not the latest, but we need them for imgaug and h5py compatibility.*
