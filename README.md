@@ -6,7 +6,7 @@ This project deals with object detection using the You Only Look Once (YOLO) det
 The code is implemented using Keras on Tensorflow.
 
 ***
-### Project Structure
+### Project Structure:
 
 - The dataset used for this project will go to the root directory. It can be downloaded from [here](https://drive.google.com/drive/folders/1bYZqQ4Bpeh-9vOd4zOuM4TGF1ElL3wZl?usp=sharing).
   
